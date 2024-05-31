@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài Tập JS Buổi 2- 3</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/img/ai-generated-8635748_1280.png"
+    />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+
+  <body>
+    <div class="container z-5">
+      <div class="row">
+        <div class="col-3 menu py-5 rounded-start-3 text-center">
+          <button class="buttonMenu" id="buttonMenu">
+            <i class="fa fa-book-open active" style="display: inline-block"></i>
+            <i class="fa fa-book active2" style="display: none"></i>
+            <span>Bài 1</span>
+          </button>
+          <button class="buttonMenu" id="buttonMenu2">
+            <i class="fa fa-book-open"></i>
+            <i class="fa fa-book"></i>
+            <span>Bài 2</span>
+          </button>
+          <button class="buttonMenu" id="buttonMenu3">
+            <i class="fa fa-book-open"></i>
+            <i class="fa fa-book"></i>
+            <span>Bài 3</span>
+          </button>
+          <button class="buttonMenu" id="buttonMenu4">
+            <i class="fa fa-book-open"></i>
+            <i class="fa fa-book"></i>
+            <span>Bài 4</span>
+          </button>
+          
+        </div>
+        <div class="col bgGround text-white">
+          <div class="bai1">
+            <h1 class="text-center">Bài tập 1: QUẢN LÍ TUYỂN SINH</h1>
+            <div class="fs-4">
+              <i class="fa fa-donate text-warning"></i>
+              <span>QUẢN LÍ TUYỂN SINH</span>
+            </div>
+            <div class="form-group">
+              <div class="fs-4">
+                <i class="fa fa-lightbulb text-warning"></i>
+                <span>Đề Bài:</span>
+              </div>
+              <p class="px-5">
+                Trong kỳ thi tuyển, một thí sinh sẽ trúng truyển nếu có điểm
+                tổng kết lớn hơn hoặc bằng điểm chuẩn và không có môn nào điểm
+                0.
+                <br />
+                - Điểm tổng kết là tống điểm của 3 môn thi và điểm ưu tiên.
+                <br />
+                - Điểm ưu tiên bao gồm điểm ưu tiên theo khu vực và điếm ưu tiên
+                theo đối tượng.
+                <br />
+                Viết chương trình nhập: điểm chuẩn của hội đồng, điểm 3 môn thi
+                của thí sinh, khu vực (nhập $X$ nếu không thuộc khu vực ưu tiên)
+                và đối tượng dự thi (nhập 0 nếu không thuộc đối tượng ưu tiên).
+                Cho biết thí sinh đó đậu hay rớt và tống số điểm đạt được.
+              </p>
+            </div>
+            <div class="fomr-group">
+              <input
+                type="text"
+                id="diemChuan"
+                placeholder="Điểm chuẩn"
+                class="diemChuan w-25"
+              />
+              <select
+                class="form-select w-25 d-inline-block"
+                aria-label="Default select example"
+                id="khuVuc"
+              >
+                <option selected>Chọn khu vực</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+              </select>
+              <select
+                class="form-select w-25 d-inline-block"
+                aria-label="Default select example"
+                id="doiTuong"
+              >
+                <option selected>Chọn đối tượng</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+            <div class="form-group mt-2">
+              <input
+                type="text"
+                id="diemMonThu1"
+                placeholder="Điểm môn thứ nhất"
+                class="diemMonThu1 w-25"
+              />
+              <input
+                type="text"
+                id="diemMonThu2"
+                placeholder="Điểm môn thứ hai"
+                class="diemMonThu2 w-25"
+              />
+              <input
+                type="text"
+                id="diemMonThu3"
+                placeholder="Điểm môn thứ Ba"
+                class="diemMonThu3 w-25"
+              />
+            </div>
+            <button class="btn btn-primary mt-4 buttonMenu" id="ketQua11">
+              Kết Quả
+            </button>
+            <div class="alert alert-success py-3 mt-4">
+              <i class="fa fa-hand-point-right text-warning"></i>
+              <span id="ketQua1"></span>
+            </div>
+          </div>
+          <div class="bai2" id="bai2">
+            <h1 class="text-center">Bài tập 2: TÍNH TIỀN ĐIỆN</h1>
+            <div class="fs-4">
+              <i class="fa fa-donate text-warning"></i>
+              <span>TÍNH TIỀN ĐIỆN</span>
+            </div>
+            <div class="form-group">
+              <div class="fs-4">
+                <i class="fa fa-lightbulb text-warning"></i>
+                <span>Đề Bài:</span>
+              </div>
+              <p class="px-5">
+                - Viết chương trình nhập vào thông tin tiêu thụ điện (Tên, số
+                Kw). <br />
+                - Tính và xuất Tiền trả theo quy tắc: <br />
+                - 50kw đầu: 500d/kw <br />
+                - 50kw kế: 650d/kw <br />
+                - 100kw kế: 850d/kw <br />
+                - 150kw kế: 1100d/kw <br />
+                - Còn lại: 1300d/kw <br />
+              </p>
+            </div>
+            <div class="fomr-group">
+              <input
+                type="text"
+                id="nhapHoTen"
+                placeholder="Nhập họ tên"
+                class="nhapHoTen form-control w-25 d-inline-block"
+              />
+              <input
+                type="number"
+                id="nhapSoKw"
+                placeholder="Nhập số Kw"
+                class="nhapNgayLam form-control w-25 d-inline-block"
+              />
+            </div>
+            <button class="btn btn-primary mt-4 buttonMenu" id="tinhTienDien">
+              Tính Tiền Điện
+            </button>
+            <div class="alert alert-success py-3 mt-4">
+              <i class="fa fa-hand-point-right text-warning"></i>
+              <span id="ketQua2"></span>
+            </div>
+          </div>
+          <div class="bai3">
+            <h1 class="text-center">Bài tập 3: TÍNH THUẾ THU NHẬP CÁ NHÂN</h1>
+            <div class="fs-4">
+              <i class="fa fa-donate text-warning"></i>
+              <span>TÍNH THUẾ THU NHẬP CÁ NHÂN</span>
+            </div>
+            <div class="form-group">
+              <div class="fs-4">
+                <i class="fa fa-lightbulb text-warning"></i>
+                <span>Đề Bài:</span>
+              </div>
+              <p class="px-5">
+                - Viết chương trình nhập vào thông tin của 1 cá nhân (Họ tên,
+                tổng thu nhập năm, số người phụ thuộc). Tính và xuất thuế thu
+                nhập cá nhân phải trả theo quy định sau: <br />
+                -Thu nhập chịu thuế = Tổng thu nhập năm - 4tr- Số người phụ
+                thuộc * 1.6tr
+                <br />
+                <table style="border: 1px solid yellow; width: 500px;">
+                  <tr>
+                    <th>Thu nhập chịu thuế(triệu)</th>
+                    <th>Thuế suất (%)</th>
+                  </tr>
+                  <tr>
+                    <td>Đến 60</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>Trên 60 đến 120</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>Trên 120 đến 210</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>Trên 210 đến 384</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>Trên 384 đến 624</td>
+                    <td>25</td>
+                  </tr>
+                  <tr>
+                    <td>Trên 624 đến 960</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>Trên 960</td>
+                    <td>35</td>
+                  </tr>
+                </table>
+              </p>
+            </div>
+            <div class="fomr-group">
+              <input
+                type="text"
+                id="nhapHoTen1"
+                placeholder="Nhập họ tên"
+                class="nhapLuong me-3"
+              />
+              <input
+                type="number"
+                id="tongThuNhapNam"
+                placeholder="Tổng thu nhập năm"
+                class="nhapLuong me-3"
+              />
+              <input
+                type="number"
+                id="soNguoiPhuThuoc"
+                placeholder="Số người phụ thuộc"
+                class="nhapLuong me-3"
+              />
+            </div>
+            <button class="btn btn-primary mt-4 buttonMenu" id="tinhTienThue">
+              Tính tiền thuế
+            </button>
+            <div class="alert alert-success py-3 mt-4">
+              <i class="fa fa-hand-point-right text-warning"></i>
+              <span id="ketQua3"></span>
+            </div>
+          </div>
+          <div class="bai4">
+            <h1 class="text-center">
+              Bài tập 4: TÍNH TIỀN CÁP
+            </h1>
+            <div class="fs-4">
+              <i class="fa fa-donate text-warning"></i>
+              <span>TÍNH TIỀN CÁP</span>
+            </div>
+            <div class="form-group">
+              <div class="fs-4">
+                <i class="fa fa-lightbulb text-warning"></i>
+                <span>Đề Bài:</span>
+              </div>
+              <p class="px-5">
+                - Viết chương trình tính hóa đơn khách hàng cho một công ty cáp. Có 2 loại khách hàng:
+                Nhà dân và doanh nghiệp. Có 2 mức giá tính tiền cáp:
+                <br />1. Nhà dân: <br>
+                • Phí xử lý hóa đơn: 4.5$ <br>
+                • Phí dịch vụ cơ bản: 20.5$ <br>
+                • Thuê kênh cao cấp: 7.5$ / kênh <br>
+                2. Doanh nghiệp <br>
+                • Phí xử lý hóa đơn: 15$ <br>
+                • Phí dịch vụ cơ bản: 75$ cho tổng 10 kết nối đầu, mỗi kết nối thêm 5$ / kết nối <br>
+                • Thuê kênh cao cấp: 50$ / kênh <br />
+                - Chương trình cho phép nhập vào Mã khách hàng, loại khách hàng, số kết nối, số kênh
+                cao cấp. Nếu chọn loại khách hàng là Doanh nghiệp ô nhập số kết nối sẽ hiện lên, nếu
+                chọn loại khách hàng là nhà dân thì ô nhập kết nối sẽ ẩn đi hoặc disabled
+              </p>
+            </div>
+            <div class="fomr-group">
+              <select onclick="soKetNoi()" id="mySelect" class="form-select w-25 d-inline" aria-label="Default select example" >
+                <option selected>Chọn loại khách hàng</option>
+                <option value="nhaDan">Nhà Dân</option>
+                <option value="DoanhNghiep">Doanh Nghiệp</option>
+              </select>
+              <input
+                type="text"
+                id="nhapMaKH"
+                placeholder="Nhập mã khách hàng"
+                class="nhapLuong me-3"
+              />
+              <input
+                type="text"
+                id="nhapSoKenh"
+                placeholder="Số kênh cao cấp"
+                class="nhapNgayLam"
+              />
+              <div class="form-group mt-2" id="inPutSoKetNoi"></div>       
+            </div>
+            <button class="btn btn-primary mt-4 buttonMenu" id="tinhTienCap">
+              Tính tiền cáp
+            </button>
+            <div class="alert alert-success py-3 mt-4">
+              <i class="fa fa-hand-point-right text-warning"></i>
+              <span id="ketQua4"></span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Main JS -->
+    <script src="./js/mainjs.js"></script>
+    <script src="./js/baiTap.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
